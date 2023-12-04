@@ -1,5 +1,0 @@
-Test suite advent-tests: RUNNING...
-advent-tests: unexpected argument `1''
-Try `advent-tests --help' for more information.
-Test suite advent-tests: FAIL
-Test suite logged to: /home/jhoff/haskell/advent-of-code-2023/dist-newstyle/build/x86_64-linux/ghc-9.2.8/AdventOfCode2023-0.1.0.0/t/advent-tests/test/AdventOfCode2023-0.1.0.0-advent-tests.log
