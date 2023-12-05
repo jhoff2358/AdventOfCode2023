@@ -42,8 +42,8 @@ numFromLine str = read [head nums, last nums]
 numFromLineComplex :: String -> Int
 numFromLineComplex str = read $ concatInt (findFirstDigit str) (findLastDigit str)
 
-solvePart1 :: [String] -> String
-solvePart1 lines = show $ sum $ map numFromLine lines
+solvePart1 :: String -> String
+solvePart1 input = show $ sum $ map numFromLine $ lines input
 
-solvePart2 :: [String] -> String
-solvePart2 lines = show $ sum $ map numFromLineComplex lines
+solvePart2 :: String -> String
+solvePart2 input = show $ sum $ map numFromLineComplex $ lines input

@@ -81,8 +81,9 @@ library
     exposed-modules:  Helper
                     , Day1
                     , Day2
-                    , Day4
                     , Day3
+                    , Day4
+                    , Day5
     hs-source-dirs:   src
     build-depends:    base ^>=4.16.4.0
                     , split
@@ -96,6 +97,7 @@ test-suite advent-tests
                        , Day2Spec
                        , Day3Spec
                        , Day4Spec
+                       , Day5Spec
     hs-source-dirs:      test
     build-depends:       base, hspec, hspec-discover, AdventOfCode2023
     default-language:    Haskell2010

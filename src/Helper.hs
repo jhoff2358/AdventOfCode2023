@@ -31,34 +31,34 @@ runDay day = do
    let filePath = "input/Day" ++ show day ++ ".txt"
    input <- readFile filePath
    case day of
-      1  -> runSolution  Day1.solvePart1  Day1.solvePart2 input
-      2  -> runSolution  Day2.solvePart1  Day2.solvePart2 input
-      3  -> runSolution  Day3.solvePart1  Day3.solvePart2 input
-      4  -> runSolution  Day4.solvePart1  Day4.solvePart2 input
-      -- 5  -> runSolution  Day5.solvePart1  Day5.solvePart2 input
-      -- 6  -> runSolution  Day6.solvePart1  Day6.solvePart2 input
-      -- 7  -> runSolution  Day7.solvePart1  Day7.solvePart2 input
-      -- 8  -> runSolution  Day8.solvePart1  Day8.solvePart2 input
-      -- 9  -> runSolution  Day9.solvePart1  Day9.solvePart2 input
-      -- 10 -> runSolution Day10.solvePart1 Day10.solvePart2 input
-      -- 11 -> runSolution Day11.solvePart1 Day11.solvePart2 input
-      -- 12 -> runSolution Day12.solvePart1 Day12.solvePart2 input
-      -- 13 -> runSolution Day13.solvePart1 Day13.solvePart2 input
-      -- 14 -> runSolution Day14.solvePart1 Day14.solvePart2 input
-      -- 15 -> runSolution Day15.solvePart1 Day15.solvePart2 input
-      -- 16 -> runSolution Day16.solvePart1 Day16.solvePart2 input
-      -- 17 -> runSolution Day17.solvePart1 Day17.solvePart2 input
-      -- 18 -> runSolution Day18.solvePart1 Day18.solvePart2 input
-      -- 19 -> runSolution Day19.solvePart1 Day19.solvePart2 input
-      -- 20 -> runSolution Day20.solvePart1 Day20.solvePart2 input
-      -- 21 -> runSolution Day21.solvePart1 Day21.solvePart2 input
-      -- 22 -> runSolution Day22.solvePart1 Day22.solvePart2 input
-      -- 23 -> runSolution Day23.solvePart1 Day23.solvePart2 input
-      -- 24 -> runSolution Day24.solvePart1 Day24.solvePart2 input
-      -- 25 -> runSolution Day25.solvePart1 Day25.solvePart2 input
+      1  -> runSolution day  Day1.solvePart1  Day1.solvePart2 input
+      2  -> runSolution day  Day2.solvePart1  Day2.solvePart2 input
+      3  -> runSolution day  Day3.solvePart1  Day3.solvePart2 input
+      4  -> runSolution day  Day4.solvePart1  Day4.solvePart2 input
+      -- 5  -> runSolution day  Day5.solvePart1  Day5.solvePart2 input
+      -- 6  -> runSolution day  Day6.solvePart1  Day6.solvePart2 input
+      -- 7  -> runSolution day  Day7.solvePart1  Day7.solvePart2 input
+      -- 8  -> runSolution day  Day8.solvePart1  Day8.solvePart2 input
+      -- 9  -> runSolution day  Day9.solvePart1  Day9.solvePart2 input
+      -- 10 -> runSolution day Day10.solvePart1 Day10.solvePart2 input
+      -- 11 -> runSolution day Day11.solvePart1 Day11.solvePart2 input
+      -- 12 -> runSolution day Day12.solvePart1 Day12.solvePart2 input
+      -- 13 -> runSolution day Day13.solvePart1 Day13.solvePart2 input
+      -- 14 -> runSolution day Day14.solvePart1 Day14.solvePart2 input
+      -- 15 -> runSolution day Day15.solvePart1 Day15.solvePart2 input
+      -- 16 -> runSolution day Day16.solvePart1 Day16.solvePart2 input
+      -- 17 -> runSolution day Day17.solvePart1 Day17.solvePart2 input
+      -- 18 -> runSolution day Day18.solvePart1 Day18.solvePart2 input
+      -- 19 -> runSolution day Day19.solvePart1 Day19.solvePart2 input
+      -- 20 -> runSolution day Day20.solvePart1 Day20.solvePart2 input
+      -- 21 -> runSolution day Day21.solvePart1 Day21.solvePart2 input
+      -- 22 -> runSolution day Day22.solvePart1 Day22.solvePart2 input
+      -- 23 -> runSolution day Day23.solvePart1 Day23.solvePart2 input
+      -- 24 -> runSolution day Day24.solvePart1 Day24.solvePart2 input
+      -- 25 -> runSolution day Day25.solvePart1 Day25.solvePart2 input
       _ -> putStrLn "Day not implemented"
 
-runSolution :: ([String] -> String) -> ([String] -> String) -> String -> IO ()
-runSolution solvePart1 solvePart2 input = do
-    putStrLn $ solvePart1 $ lines input
-    putStrLn $ solvePart2 $ lines input
+runSolution :: Int -> (String -> String) -> (String -> String) -> String -> IO ()
+runSolution dayNum solvePart1 solvePart2 input = do
+    putStrLn $ "Day " ++ show dayNum ++ " part 1: " ++ solvePart1 input
+    putStrLn $ "Day " ++ show dayNum ++ " part 2: " ++ solvePart2 input

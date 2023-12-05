@@ -34,8 +34,8 @@ updateAllCounts :: [Card] -> [Card]
 updateAllCounts [] = []
 updateAllCounts cards = head cards : updateAllCounts (updateCounts cards)
 
-solvePart1 :: [String] -> String
-solvePart1 lines = show $ sum $ map (score . newCard) lines
+solvePart1 :: String -> String
+solvePart1 input = show $ sum $ map (score . newCard) $ lines input
 
-solvePart2 :: [String] -> String
-solvePart2 lines = show $ sum $ map count $ updateAllCounts $ map newCard lines
+solvePart2 :: String -> String
+solvePart2 input = show $ sum $ map count $ updateAllCounts $ map newCard $ lines input

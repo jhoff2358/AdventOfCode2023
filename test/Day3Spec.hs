@@ -18,6 +18,6 @@ spec :: Spec
 spec = do
   describe "Day 3" $ do
     it "solves part 1" $ do
-      solvePart1 (lines exampleInput) `shouldBe` "4361"
+      solvePart1 exampleInput `shouldBe` "4361"
     it "solves part 2" $ do
-      solvePart2 (lines exampleInput) `shouldBe` "467835"
+      solvePart2 exampleInput `shouldBe` "467835"

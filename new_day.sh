@@ -12,11 +12,11 @@ DAY=$1
 cat <<EOF > src/Day${DAY}.hs
 module Day${DAY} where
 
-solvePart1 :: [String] -> String
-solvePart1 lines = "placeholder"
+solvePart1 :: String -> String
+solvePart1 input = "placeholder"
 
-solvePart2 :: [String] -> String
-solvePart2 lines = "placeholder"
+solvePart2 :: String -> String
+solvePart2 input = "placeholder"
 EOF
 
 # Create the test specification file for the day
@@ -26,9 +26,9 @@ module Day${DAY}Spec (spec) where
 import Test.Hspec
 import Day${DAY}
 
-exampleInput :: [String]
-exampleInput =
-  [ "test" ]
+exampleInput :: String
+exampleInput = "test\n\
+               \test\n"
 
 spec :: Spec
 spec = do

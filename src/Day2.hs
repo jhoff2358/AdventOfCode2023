@@ -78,8 +78,8 @@ minRequired game = (minRed, minBlue, minGreen)
 powerSet :: (ColorCount, ColorCount, ColorCount) -> Int
 powerSet (a, b, c) = count a * count b * count c
 
-solvePart1 :: [String] -> String
-solvePart1 lines = show $ sum $ map num $ filter validGame $ map parseGame lines
+solvePart1 :: String -> String
+solvePart1 input = show $ sum $ map num $ filter validGame $ map parseGame $ lines input
 
-solvePart2 :: [String] -> String
-solvePart2 lines = show $ sum $ map (powerSet . minRequired . parseGame) lines
+solvePart2 :: String -> String
+solvePart2 input = show $ sum $ map (powerSet . minRequired . parseGame) $ lines input

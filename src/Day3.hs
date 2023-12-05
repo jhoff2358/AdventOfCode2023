@@ -70,12 +70,12 @@ getGearRatio nums pos = case filter (adjacentToIndex pos) nums of
 parseInput :: [String] -> (Vec2D Bool, [SchematicNumber])
 parseInput lines = (getSymbolVector lines, getNums lines)
 
-solvePart1 :: [String] -> String
-solvePart1 lines = show $ sum $ map value $ filter (adjacentToSymbol symbolVector) nums
+solvePart1 :: String -> String
+solvePart1 input = show $ sum $ map value $ filter (adjacentToSymbol symbolVector) nums
    where 
-      (symbolVector, nums) = parseInput lines
+      (symbolVector, nums) = parseInput $ lines input
 
-solvePart2 :: [String] -> String
-solvePart2 lines = show $ sum $ mapMaybe (getGearRatio nums) (getSymbolIndices symbolVector)
+solvePart2 :: String -> String
+solvePart2 input = show $ sum $ mapMaybe (getGearRatio nums) (getSymbolIndices symbolVector)
    where
-      (symbolVector, nums) = parseInput lines
+      (symbolVector, nums) = parseInput $ lines input
